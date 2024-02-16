@@ -23,7 +23,7 @@ in
 {
 
 	home.file.wallpaper = {
-		source = ./img/wall.jpg;
+		source = ../img/wall.jpg;
 		target = wallpaperPath;
 	};
 

@@ -145,6 +145,7 @@
 		bind = $mainMod, R, exec, $menu
 		bind = $mainMod, P, pseudo, # dwindle
 		bind = $mainMod, J, togglesplit, # dwindle
+		bind = $mainMod, G, exec, grim -g "$(slurp -d)" -t png - | wl-copy -t image/png
 
 		# Move focus with mainMod + arrow keys
 		bind = $mainMod, left, movefocus, l
