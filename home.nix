@@ -2,12 +2,12 @@
 
 {
   imports = [
-    ./ags.nix
-    ./bash.nix
-    ./fonts.nix
-    ./hyprland.nix
-    ./kitty.nix
-    ./starship.nix 
+    ./programs/ags.nix
+    ./programs/bash.nix
+    ./programs/fonts.nix
+    ./programs/hyprland.nix
+    ./programs/kitty.nix
+    ./programs/starship.nix 
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
