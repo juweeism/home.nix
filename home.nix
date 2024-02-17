@@ -9,10 +9,18 @@
     ./programs/kitty.nix
     ./programs/starship.nix 
   ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "minx";
   home.homeDirectory = "/home/minx";
+  
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 22;
+  };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -94,6 +102,7 @@
 	enable = true;
         defaultEditor = true;
   };
+
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

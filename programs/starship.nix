@@ -10,13 +10,13 @@
 			right_format = ''$cmd_duration'';
 
 			character = {
-				success_symbol = "[✦ .](bright-cyan)";
-				error_symbol = "[✦ .](red)";
+				success_symbol = "[ ›]($style)";
+				error_symbol = "[ ›]red)";
 		      	};
 		      	username = {
 				style_user = "white";
 				style_root = "white";
-				format = "[$user]($style) ";
+				format = "(white)[$user]($style) ";
 				disabled = false;
 				show_always = true;
 		      	};

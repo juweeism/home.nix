@@ -128,6 +128,7 @@
 		# windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
 		# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 		windowrulev2 = nomaximizerequest, class:.* # You'll probably like this.
+		windowrulev2 = noborder, onworkspace:1
 
 		# See https://wiki.hyprland.org/Configuring/Keywords/ for more
 		$mainMod = SUPER
@@ -190,6 +191,8 @@
 		# Scroll through existing workspaces with mainMod + scroll
 		bind = $mainMod, mouse_down, workspace, e+1
 		bind = $mainMod, mouse_up, workspace, e-1
+		bind = $mainMod SHIFT, m, workspace, e+1
+		bind = $mainMod SHIFT, n, workspace, e-1
 
 		# Move/resize windows with mainMod + LMB/RMB and dragging
 		bindm = $mainMod, mouse:272, movewindow

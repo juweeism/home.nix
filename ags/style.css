@@ -12,10 +12,10 @@ window.bar {
 }
 
 button {
-    min-width: 12px;
-    background: transparent;
+    min-width: 9px;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 45%;
-    border: 1px solid white;
+    border: none;
 }
 
 button:active {
@@ -31,13 +31,12 @@ label {
 }
 
 .workspaces {
-    margin-top: 0;
+    margin: 7px 0;
 }
 
 .workspaces button.focused {
-    min-width: 45px;
+    min-width: 27px;
     border-radius: 99px;
-    background: transparent;
 }
 
 .client-title {
@@ -49,7 +48,7 @@ label {
 }
 
 .left_bar {
-	margin: 12px 18px;
+	margin: 12px 30px;
 }
 
 .right_bar {
