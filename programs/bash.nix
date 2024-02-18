@@ -32,7 +32,7 @@ in
 		enableCompletion = true;
 
 		bashrcExtra = ''
-			echo """${firefly}"""
+			echo -e """\e[38;2;175;169;160m${firefly}\e[0m"""
 			set -o vi
 
 			export WALLPAPER_PATH="${wallpaperPath}"

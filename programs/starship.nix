@@ -10,8 +10,8 @@
 			right_format = ''$cmd_duration'';
 
 			character = {
-				success_symbol = "[ ›]($style)";
-				error_symbol = "[ ›]red)";
+				success_symbol = "[🍀]($style)";
+				error_symbol = "[☘️]](red)";
 		      	};
 		      	username = {
 				style_user = "white";

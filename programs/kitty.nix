@@ -3,12 +3,13 @@
 {
 	programs.kitty = {
 		enable = true;
-		theme = "N0tch2k";
+		theme = "Everforest Dark Hard";
 
 		# https://sw.kovidgoyal.net/kitty/conf/
 		extraConfig = ''
 			window_margin_width 9
-			background_opacity 0.75
+			background_opacity 0.81
+			# foreground #baafa9
 			background #000000
 		'';
 	};

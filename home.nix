@@ -4,6 +4,7 @@
   imports = [
     ./programs/ags.nix
     ./programs/bash.nix
+    ./programs/direnv.nix 
     ./programs/fonts.nix
     ./programs/hyprland.nix
     ./programs/kitty.nix
