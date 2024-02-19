@@ -11,7 +11,7 @@
 
 			character = {
 				success_symbol = "[🍀]($style)";
-				error_symbol = "[☘️]](red)";
+				error_symbol = "[☘️](red)";
 		      	};
 		      	username = {
 				style_user = "white";

@@ -3,7 +3,7 @@
 {
 	programs.kitty = {
 		enable = true;
-		theme = "Everforest Dark Hard";
+		theme = "N0tch2k";
 
 		# https://sw.kovidgoyal.net/kitty/conf/
 		extraConfig = ''
