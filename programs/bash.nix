@@ -1,7 +1,7 @@
 {config, ...}:
 
 let
-	wallpaperPath = "${config.home.homeDirectory}/minix/wallpaper/wall.jpg";
+	wallpaperPath = "${config.home.homeDirectory}/.wallpaper/wall.jpg";
 
 	firefly = ''   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠇⣀⡀⢥⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -23,13 +23,18 @@ in
 {
 
 	home.file.wallpaper = {
-		source = ../img/wall.jpg;
+		source = ../img/axel-white-snake.jpg;
 		target = wallpaperPath;
 	};
 
 	programs.bash = {
 		enable = true;
 		enableCompletion = true;
+
+		shellAliases = {
+		    # use my nvim flake
+		    nvim = "nix run github:jamibear/neovim.nix";
+		};
 
 		bashrcExtra = ''
 			echo -e """\e[38;2;175;169;160m${firefly}\e[0m"""

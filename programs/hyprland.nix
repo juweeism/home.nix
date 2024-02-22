@@ -49,9 +49,9 @@
 
 		    gaps_in = 0
 		    gaps_out = 0
-		    border_size = 7
-		    col.active_border = rgba(00000075)
-		    col.inactive_border = rgba(00000027)
+		    border_size = 9
+		    col.active_border = rgba(00000099)
+		    col.inactive_border = rgba(00000060)
 
 		    layout = dwindle
 
@@ -65,11 +65,11 @@
 		    rounding = 15
 
 		    blur {
-			enabled = false
-			size = 3
-			passes = 1
+			enabled = true
+			size = 6
+			passes = 2
 			
-			vibrancy = 0.1696
+			vibrancy = 0.9
 		    }
 
 		    drop_shadow = false
@@ -111,7 +111,8 @@
 
 		misc {
 		    # See https://wiki.hyprland.org/Configuring/Variables/ for more
-		    force_default_wallpaper = -1 # Set to 0 or 1 to disable the anime mascot wallpapers
+		    force_default_wallpaper = 0 # Set to 0 or 1 to disable the anime mascot wallpapers
+		    disable_hyprland_logo = true
 		}
 
 		# Example per-device config
@@ -128,7 +129,7 @@
 		# windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
 		# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 		windowrulev2 = nomaximizerequest, class:.* # You'll probably like this.
-		windowrulev2 = noborder, onworkspace:1
+		# windowrulev2 = noborder, onworkspace:1
 
 		# See https://wiki.hyprland.org/Configuring/Keywords/ for more
 		$mainMod = SUPER

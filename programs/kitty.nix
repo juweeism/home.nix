@@ -10,7 +10,7 @@
 			window_margin_width 9
 			background_opacity 0.81
 			# foreground #baafa9
-			background #000000
+			background #010100
 		'';
 	};
 }
