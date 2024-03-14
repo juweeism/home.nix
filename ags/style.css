@@ -7,15 +7,17 @@
 }
 
 window.bar {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
     color: white;
 }
 
 button {
     min-width: 9px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 45%;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 48%;
     border: none;
+    border-top: none;
+    outline: none;
 }
 
 button:active {
@@ -31,12 +33,15 @@ label {
 }
 
 .workspaces {
-    margin: 7px 0;
+    margin: 9px;
+    border-radius: 99px;
+    font-size: 3px;
 }
 
 .workspaces button.focused {
-    min-width: 27px;
+    min-width: 24px;
     border-radius: 99px;
+    background: rgba(255, 255, 255, 1);
 }
 
 .client-title {
@@ -48,11 +53,11 @@ label {
 }
 
 .left_bar {
-    margin: 12px 30px;
+    margin: 0px 30px;
 }
 
 .right_bar {
-    margin: 12px 18px;
+    margin: 0px 18px;
 }
 
 progress,

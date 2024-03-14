@@ -6,6 +6,10 @@
 		swww
 	];
 
+	programs.hyprlock = {
+	    enable = true;
+	};
+
 	wayland.windowManager.hyprland = {
 		enable = true;
 
@@ -49,7 +53,7 @@
 
 		    gaps_in = 0
 		    gaps_out = 0
-		    border_size = 9
+		    border_size = 12
 		    col.active_border = rgba(00000099)
 		    col.inactive_border = rgba(00000060)
 

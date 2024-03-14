@@ -68,6 +68,19 @@ hardware.pulseaudio.package = pkgs.pulseaudioFull;
     layout = "ph";
     xkbVariant = "";
   };
+  
+  location.provider = "manual";
+  location.longitude = 14.39;
+  location.latitude = 121.7;
+
+  services.redshift = {
+    enable = true;
+
+    brightness = {
+	day = "1";
+	night = "1";
+    };
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.minx = {
@@ -88,9 +101,8 @@ hardware.pulseaudio.package = pkgs.pulseaudioFull;
     lsof
     git
     chromium
-    kitty
-
     pavucontrol 
+    telegram-desktop
   ];
 
   programs.hyprland.enable = true;

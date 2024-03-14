@@ -8,7 +8,7 @@
 		# https://sw.kovidgoyal.net/kitty/conf/
 		extraConfig = ''
 			window_margin_width 9
-			background_opacity 0.81
+			background_opacity 0.78
 			# foreground #baafa9
 			background #010100
 		'';

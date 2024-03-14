@@ -10,9 +10,10 @@
 
     ags.url = "github:Aylur/ags";
     hyprland.url = "github:hyprwm/Hyprland";
+    hyprlock.url = "github:hyprwm/hyprlock";
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, hyprlock, ... }@inputs:
     let
       username = "minx";
       system = "x86_64-linux";
@@ -37,7 +38,10 @@
 
 	extraSpecialArgs = { inherit inputs; };
 
-        modules = [ ./home.nix ];
+        modules = [ 
+	    ./home.nix 
+	    hyprlock.homeManagerModules.default
+	];
       };
     };
 }
