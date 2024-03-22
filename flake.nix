@@ -11,9 +11,10 @@
     ags.url = "github:Aylur/ags";
     hyprland.url = "github:hyprwm/Hyprland";
     hyprlock.url = "github:hyprwm/hyprlock";
+    nvim.url = "github:juweeism/neovim.nix";
   };
 
-  outputs = { nixpkgs, home-manager, hyprlock, ... }@inputs:
+  outputs = { nixpkgs, home-manager, hyprlock, nvim, ... }@inputs:
     let
       username = "minx";
       system = "x86_64-linux";

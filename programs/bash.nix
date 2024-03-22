@@ -32,8 +32,6 @@ in
 		enableCompletion = true;
 
 		shellAliases = {
-		    # use my nvim flake
-		    nvim = "nix run github:jamibear/neovim.nix";
 		};
 
 		bashrcExtra = ''

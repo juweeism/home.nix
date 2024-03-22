@@ -15,6 +15,8 @@
   boot.loader.systemd-boot.configurationLimit = 3;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  virtualisation.docker.enable = true;
+
   nix = {
     settings = {
       experimental-features = 
@@ -26,12 +28,17 @@
   };
 
   # trying to make sound work
-hardware.pulseaudio.enable = true;
-hardware.pulseaudio.support32Bit = true;   
-users.extraUsers.minx.extraGroups = [ "audio" ];
 nixpkgs.config.pulseaudio = true;
-hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
-hardware.pulseaudio.package = pkgs.pulseaudioFull;
+
+hardware = {
+    pulseaudio = {
+        enable = true;
+        support32Bit = true;
+        package = pkgs.pulseaudioFull;
+        extraConfig = "load-module module-combine-sink";
+    };
+};
+users.extraUsers.minx.extraGroups = [ "audio" ];
 
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -86,7 +93,7 @@ hardware.pulseaudio.package = pkgs.pulseaudioFull;
   users.users.minx = {
     isNormalUser = true;
     description = "minx";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [];
   };
 
@@ -106,6 +113,15 @@ hardware.pulseaudio.package = pkgs.pulseaudioFull;
   ];
 
   programs.hyprland.enable = true;
+  programs.nix-ld = with pkgs; {
+    enable = false;
+
+    libraries = [
+        stdenv.cc.cc
+        glibc
+        chromium
+    ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
